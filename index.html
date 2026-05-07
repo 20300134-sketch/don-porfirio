@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Porfirio - Estilo y Tradición</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico?v=1.1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <h1>
+                    <span class="barber-emoji">💈</span>
+                    <span class="site-title">Don Porfirio</span>
+                    <span class="barber-emoji">💈</span>
+                </h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-logo-container">
+                <img src="images/logo.png" alt="Escuela de Barbería Don Porfirio" class="hero-logo">
+            </div>
+            <div class="hero-content">
+                <h2>Bienvenido a Nuestro Salón</h2>
+                <p>Descubre nuestros cortes de cabello más populares y diseñados especialmente para ti</p>
+                
+                <div class="frase-motivacional">
+                    <p>"De 0 a profesional con nuestro método 360°"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalogo" id="catalogo">
+        <div class="container">
+            <h2 class="section-title">Nuestros Cortes</h2>
+            <div id="gridCortes"></div>
+        </div>
+    </section>
+
+    <div id="modalVariantes" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitulo">Variantes</h3>
+            <div id="contenedorVariantes" class="variantes-grid"></div>
+        </div>
+    </div>
+
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <h2>Contacto y Redes Sociales</h2>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Teléfonos</h3>
+                    <p>Fijo: 773 100 8728</p>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-whatsapp whatsapp-icon"></i>
+                    <h3>WhatsApp</h3>
+                    <p>773 192 8076</p>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-facebook facebook-icon"></i>
+                    <h3>Facebook</h3>
+                    <p>porfirioBarber</p>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-instagram instagram-icon"></i>
+                    <h3>Instagram</h3>
+                    <p>@don_porfirio_100</p>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-tiktok tiktok-icon"></i>
+                    <h3>TikTok</h3>
+                    <p>porfirio Barber</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Don Porfirio - Estilo y Tradición</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
