@@ -70,7 +70,7 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
 
 /* --- CATÁLOGO --- */
 .catalogo { padding: 60px 0; background: white; }
-.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 40px; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: #000000; }
 .nivel-section { margin-bottom: 50px; }
 .nivel-section h3 {
     font-size: 1.8rem;
@@ -80,7 +80,7 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
 }
 .nivel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
 
-/* --- TARJETAS CON ANIMACIÓN --- */
+/* --- TARJETAS CON ANIMACIÓN (Mantenido intacto) --- */
 .corte-card {
     background: white;
     border-radius: 15px;
@@ -114,7 +114,7 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
 .corte-info h4 { color: var(--color-primary); transition: color 0.3s; margin-bottom: 10px; }
 .corte-card:hover .corte-info h4 { color: var(--color-secondary); }
 
-/* --- BOTÓN VARIANTES --- */
+/* --- BOTÓN VARIANTES (Mantenido intacto) --- */
 .btn-variante {
     background-color: var(--color-primary);
     color: var(--color-secondary);
@@ -179,12 +179,20 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
     border: 2px solid #ddd;
 }
 
-/* --- CONTACTO CORREGIDO PARA 5 COLUMNAS --- */
-.contacto { background: var(--color-primary); color: white; padding: 60px 0; text-align: center; }
+/* --- CONTACTO CORREGIDO: FONDO BLANCO Y LETRAS NEGRAS FORZADAS --- */
+.contacto { background: #ffffff; color: #000000 !important; padding: 60px 0; text-align: center; }
+.contacto h2 { color: #000000 !important; margin-bottom: 20px; }
+
+/* Para evitar que los enlaces se pongan azules o blancos */
+.social-link {
+    text-decoration: none !important;
+    color: #000000 !important; 
+    display: block;
+    transition: 0.3s;
+}
 
 .contact-info { 
     display: grid; 
-    /* Cambiamos a 5 columnas fijas para pantallas grandes */
     grid-template-columns: repeat(5, 1fr); 
     gap: 15px; 
     margin-top: 40px; 
@@ -192,14 +200,24 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
 
 .info-item { 
     padding: 20px; 
-    background: rgba(255,255,255,0.05); 
+    background: #f9f9f9; 
     border-radius: 10px; 
+    border: 1px solid #eee;
     transition: 0.3s;
 }
 
+/* EFECTO DORADO AL PASAR EL MOUSE (Solo en sección contacto) */
 .info-item:hover {
-    background: rgba(255,255,255,0.1);
+    background: #ffffff;
     transform: translateY(-5px);
+    border-color: var(--color-secondary);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+}
+
+.info-item:hover .social-link, 
+.info-item:hover h3, 
+.info-item:hover p {
+    color: var(--color-secondary) !important;
 }
 
 .info-item i { font-size: 2.2rem; margin-bottom: 15px; }
@@ -207,18 +225,15 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
 .whatsapp-icon { color: #25D366; }
 .facebook-icon { color: #1877F2; }
 .instagram-icon { color: #E4405F; }
-.tiktok-icon { color: #ff0050; }
+.tiktok-icon { color: #000000; }
 
 .footer { background: #111; color: #777; text-align: center; padding: 20px 0; }
 
-/* AJUSTES PARA TABLETS Y PANTALLAS MEDIANAS */
+/* AJUSTES RESPONSIVE MANTENIDOS */
 @media (max-width: 1000px) {
-    .contact-info { 
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
-    }
+    .contact-info { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* AJUSTES PARA MÓVIL */
 @media (max-width: 600px) {
     .site-title { font-size: 1.2rem; }
     .hero-logo { max-width: 250px; }
@@ -226,7 +241,7 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
     .nav ul { gap: 10px; }
     .section-title { font-size: 1.8rem; }
     .nivel-grid { grid-template-columns: 1fr; }
-    
-    /* En móvil, que se vean uno debajo del otro o en 2 columnas para que no se amontone */
     .contact-info { grid-template-columns: 1fr; }
+    /* Forzar que en móvil el texto de contacto siga siendo negro */
+    .info-item h3, .info-item p { color: #000000 !important; }
 }
