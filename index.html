@@ -23,7 +23,7 @@
             <nav class="nav">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#catalogo" onclick="mostrarMensajeInicial()">Catálogo</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
@@ -37,8 +37,7 @@
             </div>
             <div class="hero-content">
                 <h2>Bienvenido a Nuestro Salón</h2>
-                <p>Descubre nuestros cortes de cabello más populares y diseñados especialmente para ti</p>
-                
+                <p>Descubre nuestros estilos premium diseñados especialmente para ti</p>
                 <div class="frase-motivacional">
                     <p>"De 0 a profesional con nuestro método 360°"</p>
                 </div>
@@ -46,11 +45,58 @@
         </div>
     </section>
 
-    <section class="catalogo" id="catalogo">
+    <section class="menu-categorias" id="catalogo">
         <div class="container">
-            <h2 class="section-title">Nuestros Cortes</h2>
-            <div id="gridCortes"></div>
+            <div class="categorias-grid">
+                
+                <button class="cat-item" onclick="filtrarCategoria('Clásicos')">
+                    <div class="cat-icon-wrapper">
+                        <img src="images/imgen boton 1.png" alt="Clásicos">
+                    </div>
+                    <span>CLÁSICOS</span>
+                </button>
+
+                <button class="cat-item" onclick="filtrarCategoria('Modernos')">
+                    <div class="cat-icon-wrapper">
+                        <img src="images/imagen boton 2.png" alt="Modernos">
+                    </div>
+                    <span>MODERNOS</span>
+                </button>
+
+                <button class="cat-item" onclick="filtrarCategoria('Urbanos')">
+                    <div class="cat-icon-wrapper">
+                        <img src="images/imagen boton 5.png" alt="Urbanos">
+                    </div>
+                    <span>URBANOS</span>
+                </button>
+
+                <button class="cat-item" onclick="filtrarCategoria('Barba')">
+                    <div class="cat-icon-wrapper">
+                        <img src="images/imagen boton 3.png" alt="Barba">
+                    </div>
+                    <span>BARBA</span>
+                </button>
+
+                <button class="cat-item" onclick="filtrarCategoria('Diseño y Color')">
+                    <div class="cat-icon-wrapper">
+                        <img src="images/imagen boton 4.png" alt="Diseño y Color">
+                    </div>
+                    <span>DISEÑO & COLOR</span>
+                </button>
+
+            </div>
         </div>
+    </section>
+
+    <div class="separador-premium">
+        <div class="linea-dorada"></div>
+        <i class="fas fa-cut nav-scissors"></i>
+        <div class="linea-dorada"></div>
+    </div>
+
+    <section class="catalogo-dinamico">
+        <div class="container" id="contenedorCortes">
+            </div>
     </section>
 
     <div id="modalVariantes" class="modal">
